@@ -1,17 +1,8 @@
 name : test
 
 on:
-
-    workflow_dispatch:
-        inputs:
-          environement:
-              description: "choose option"
-              required: true
-              default: staging
-              type: choice
-              options:
-                  - production
-                  - staging
+    repository_dispatch:
+      types: [test]
 jobs :
 
     test:
