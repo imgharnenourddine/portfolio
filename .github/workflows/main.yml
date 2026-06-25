@@ -1,0 +1,22 @@
+name : test
+
+on:
+
+    workflow_dispatch:
+        inputs:
+          environement:
+              description: "choose option"
+              required: true
+              default: staging
+              type: choice
+              options:
+                  - production
+                  - staging
+jobs :
+
+    test:
+      runs-on: ubuntu-latest
+      steps:
+          - name: test
+            run: echo "gooooooooooooood"
+          
